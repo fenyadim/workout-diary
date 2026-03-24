@@ -20,7 +20,7 @@ export const auth = betterAuth({
 						'Content-Type': 'application/json',
 					},
 					body: JSON.stringify({
-						from: 'noreply@yourdomain.com',
+						from: 'onboarding@resend.dev',
 						to: email,
 						subject: 'Код для входа — Дневник тренировок',
 						html: `
