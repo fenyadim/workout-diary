@@ -1,3 +1,4 @@
+import { Toaster } from '@/shared/ui/sonner'
 import type { Metadata } from 'next'
 import { Geist, Syne } from 'next/font/google'
 import './globals.css'
@@ -27,7 +28,10 @@ export default function RootLayout({
 			lang='ru'
 			className={`${geistSans.className}  ${syneSans.variable} h-full antialiased`}
 		>
-			<body className='min-h-full flex flex-col'>{children}</body>
+			<body className='min-h-full flex flex-col'>
+				{children}
+				<Toaster />
+			</body>
 		</html>
 	)
 }

@@ -1,5 +1,6 @@
 import { betterAuth } from 'better-auth'
 import { prismaAdapter } from 'better-auth/adapters/prisma'
+import { nextCookies } from 'better-auth/next-js'
 import { emailOTP } from 'better-auth/plugins'
 import { db } from './prisma'
 
@@ -11,6 +12,7 @@ export const auth = betterAuth({
 		enabled: false,
 	},
 	plugins: [
+		nextCookies(),
 		emailOTP({
 			sendVerificationOTP: async ({ email, otp, type }) => {
 				await fetch('https://api.resend.com/emails', {
