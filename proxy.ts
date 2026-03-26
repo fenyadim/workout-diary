@@ -9,16 +9,16 @@ export function proxy(request: NextRequest) {
 		return NextResponse.redirect(new URL('/login', request.url))
 	}
 
-	if (request.nextUrl.pathname.startsWith('/login')) {
-		return NextResponse.redirect(new URL('/', request.url))
-	}
+	// if (request.nextUrl.pathname.startsWith('/login')) {
+	// 	return NextResponse.redirect(new URL('/', request.url))
+	// }
 
-	if (
-		request.nextUrl.pathname === '/login/verify' &&
-		!regexEmail.test(request.nextUrl.searchParams.get('email')!)
-	) {
-		return NextResponse.redirect(new URL('/login', request.url))
-	}
+	// if (
+	// 	request.nextUrl.pathname === '/login/verify' &&
+	// 	!regexEmail.test(request.nextUrl.searchParams.get('email')!)
+	// ) {
+	// 	return NextResponse.redirect(new URL('/login', request.url))
+	// }
 
 	return NextResponse.next()
 }

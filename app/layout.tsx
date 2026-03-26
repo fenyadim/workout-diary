@@ -29,8 +29,10 @@ export default function RootLayout({
 			className={`${geistSans.className}  ${syneSans.variable} h-full antialiased`}
 		>
 			<body className='min-h-full flex flex-col'>
-				{children}
-				<Toaster />
+				<main className='px-5 pt-5 pb-20 min-h-screen'>
+					{children}
+					<Toaster />
+				</main>
 			</body>
 		</html>
 	)

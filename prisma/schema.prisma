@@ -45,6 +45,11 @@ model Exercise {
   createdBy     String?
   programItems  ProgramExercise[]
   sets          SessionSet[]
+
+  @@index([primaryMuscle])
+  @@index([level])
+  @@index([category])
+  @@index([name])
 }
 
 model Program {
