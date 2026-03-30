@@ -21,5 +21,5 @@ export default async function ExercisesRoute({
 
 	const muscles = [...new Set(data.items.map(e => e.primaryMuscle))].sort()
 
-	return <ExercisesPage exercisesItems={data.items} total={data.total} />
+	return <ExercisesPage exercisesItems={data.items} total={data.total} currentMuscle={(await searchParams).muscle} />
 }
