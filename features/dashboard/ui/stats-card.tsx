@@ -17,8 +17,8 @@ export const StatsCard = ({ icon: Icon, title, value, isPrimary = false }: IStat
       })}
     >
       <Icon size={18} className="opacity-70" />
-      <span className="text-2xl font-heading font-extrabold leading-none mt-1">{value}</span>
-      <p className="text-xs font-medium opacity-70">{title}</p>
+      <span className="text-2xl font-extrabold leading-none mt-1">{value}</span>
+      <p className="text-xs opacity-60">{title}</p>
     </div>
   )
 }

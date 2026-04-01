@@ -1,6 +1,6 @@
 import { ChevronRight, Dumbbell, Flame, Timer, Trophy, Zap } from 'lucide-react'
 
-import { StatsCard } from '@/features/dashboard'
+import { ProgramCard, StatsCard } from '@/features/dashboard'
 
 export default function DashboardPage() {
   return (
@@ -9,7 +9,7 @@ export default function DashboardPage() {
       <div className="flex items-center justify-between pt-5 pb-3">
         <div className="flex flex-col gap-0.5">
           <span className="text-sm text-muted-foreground">Доброе утро,</span>
-          <span className="text-xl font-heading font-extrabold text-foreground">Alex 👋</span>
+          <span className="text-xl font-extrabold text-foreground">Дима 👋</span>
         </div>
         <div className="flex items-center gap-2.5">
           <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center">
@@ -37,14 +37,11 @@ export default function DashboardPage() {
       {/* Programs section */}
       <div className="flex flex-col gap-3 pb-6">
         <div className="flex items-center justify-between">
-          <span
-            className="text-[17px] font-bold text-foreground"
-            style={{ fontFamily: 'var(--font-plus-jakarta-sans)' }}
-          >
-            Мои программы
-          </span>
-          <span className="text-[13px] font-semibold text-primary">Все</span>
+          <span className="font-bold text-foreground">Мои программы</span>
+          <span className="text-sm font-semibold text-primary">Все</span>
         </div>
+
+        <ProgramCard />
 
         {/* Program 1 */}
         <div className="flex items-center gap-3.5 py-4 border-b border-border relative">

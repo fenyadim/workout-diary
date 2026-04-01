@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Syne } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
 import { cn } from '@/lib/utils'
 import { Toaster } from '@/shared/ui/sonner'
@@ -8,11 +8,6 @@ import './globals.css'
 
 const interFont = Inter({
   variable: '--font-inter',
-  subsets: ['latin'],
-})
-
-const syncFont = Syne({
-  variable: '--font-heading-stack',
   subsets: ['latin'],
 })
 
@@ -28,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className="h-full antialiased">
-      <body className={cn(interFont.variable, syncFont.variable, 'min-h-full')}>
+      <body className={cn(interFont.className, 'min-h-full')}>
         {children}
         <Toaster />
       </body>
