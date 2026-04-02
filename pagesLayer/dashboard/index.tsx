@@ -1,4 +1,4 @@
-import { Dumbbell, Flame, Timer, Trophy, Zap } from 'lucide-react'
+import { Dumbbell, Flame, HeartPulse, Timer, Trophy, Zap } from 'lucide-react'
 import Link from 'next/link'
 import { Fragment } from 'react'
 
@@ -6,21 +6,19 @@ import { IProgramCard, ProgramCard, StatsCard } from '@/features/dashboard'
 import { Button } from '@/shared/ui/button'
 import { Separator } from '@/shared/ui/separator'
 
-// const PROGRAM_CARDS: IProgramCard[] = [
-//   {
-//     title: 'Силовая A/B',
-//     count: 5,
-//     icon: Dumbbell,
-//     color: 'yellow',
-//   },
-//   {
-//     title: 'Кардио + тонус',
-//     count: 4,
-//     icon: HeartPulse,
-//   },
-// ]
-
-const PROGRAM_CARDS: IProgramCard[] = []
+const PROGRAM_CARDS: IProgramCard[] = [
+  {
+    title: 'Силовая A/B',
+    count: 5,
+    icon: Dumbbell,
+    color: 'yellow',
+  },
+  {
+    title: 'Кардио + тонус',
+    count: 4,
+    icon: HeartPulse,
+  },
+]
 
 export const DashboardPage = () => {
   return (

@@ -14,9 +14,9 @@ interface ExercisesPageProps {
 
 export const ExercisesPage = ({ exercisesItems, total, currentMuscle }: ExercisesPageProps) => {
   return (
-    <div className="flex flex-col min-h-screen bg-white pb-24">
+    <div className="flex flex-col min-h-screen bg-white">
       {/* Header */}
-      <div className="flex items-center justify-between px-6 pt-4 pb-3">
+      <div className="flex items-center justify-between max-[390px]:px-6 pt-4 pb-3">
         <h1 className="text-[26px] font-extrabold text-foreground">Упражнения</h1>
         <div className="w-9 h-9 rounded-full bg-muted flex items-center justify-center">
           <SlidersHorizontal size={18} className="text-foreground" />
@@ -24,7 +24,7 @@ export const ExercisesPage = ({ exercisesItems, total, currentMuscle }: Exercise
       </div>
 
       {/* Search */}
-      <div className="px-6 pb-4">
+      <div className="pb-4">
         <div className="flex items-center gap-2.5 h-12 rounded-2xl bg-muted px-4">
           <Search size={18} className="text-muted-foreground shrink-0" />
           <span className="text-[15px] text-muted-foreground">Поиск упражнений...</span>
@@ -32,7 +32,7 @@ export const ExercisesPage = ({ exercisesItems, total, currentMuscle }: Exercise
       </div>
 
       {/* Filter chips */}
-      <div className="flex gap-2 px-6 pb-4 overflow-x-auto scrollbar-none">
+      <div className="flex gap-2 pb-4 overflow-x-auto scrollbar-none">
         <Link href={{ pathname: '/exercises', query: { muscle: '' } }}>
           <span
             className={cn(
@@ -60,7 +60,7 @@ export const ExercisesPage = ({ exercisesItems, total, currentMuscle }: Exercise
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-2 gap-3 px-6">
+      <div className="grid grid-cols-2 gap-3">
         {exercisesItems.map(({ id, name, imageUrl, primaryMuscle, level }) => (
           <Link key={id} href={`/exercises/${id}`}>
             <div className="rounded-[20px] bg-muted overflow-hidden flex flex-col">
